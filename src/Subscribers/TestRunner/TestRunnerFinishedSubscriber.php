@@ -36,7 +36,7 @@ final class TestRunnerFinishedSubscriber implements FinishedSubscriber
                 'success' => $testResult->numberOfTestsRun() - $testResult->numberOfTestErroredEvents(),
                 'incomplete' => $testResult->numberOfTestMarkedIncompleteEvents(),
                 'risky' => $testResult->numberOfTestsWithTestConsideredRiskyEvents(),
-                'skipped' => $testResult->numberOfTestSuiteSkippedEvents() + $testResult->numberOfTestSkippedEvents(),
+                'skipped' => $testResult->numberOfTestSkippedByTestSuiteSkippedEvents() + $testResult->numberOfTestSkippedEvents(),
             ],
         ];
 
